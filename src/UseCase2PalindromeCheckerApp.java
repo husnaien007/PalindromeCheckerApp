@@ -1,0 +1,27 @@
+public class UseCase2PalindromeCheckerApp {
+
+    public static void main(String[] args) {
+
+        // Hardcoded string input
+        String input = "madam";
+
+        boolean isPalindrome = true;
+
+        // Loop only till half of the string length.
+        for (int i = 0; i < input.length() / 2; i++) {
+
+            // Compare character from start with character from end
+            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        // Display the result
+        if (isPalindrome) {
+            System.out.println(input + " is a palindrome.");
+        } else {
+            System.out.println(input + " is NOT a palindrome.");
+        }
+    }
+}
